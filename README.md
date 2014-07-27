@@ -10,10 +10,14 @@ The  run_analysis.R file contains all steps taken to create a tidy data set and 
 Action take to create the tidy date set can be summarized as fallow:
 
 1.	Merging the training and the test sets in order to create one data set
+-	Firstly by x train and test, secondly y train and test thirdly subject train and test 
 2.	Extracting  the mean and standard deviation for each measurement
+-	based on features.txt 
 3.	Using descriptive activity names to name the activities in the data set
+-	From activity_labels.txt
 4.	Labelling the data set with descriptive activity names
 5.	Creating second independent tidy data set with the average of each variable for each activity and each subject.
+
 
 
 In the CodeBook.md file can be found variables of the tidy dataset as well as transformation description.
