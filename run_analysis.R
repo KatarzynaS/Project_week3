@@ -17,7 +17,7 @@ head(X)
 
 data1  <- read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/train/subject_train.txt")
 data2 <- read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/subject_test.txt")
-S <- rbind(data1, data2)
+Subject <- rbind(data1, data2)
 
 data1  <- read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/train/y_train.txt")
 data2 <- read.table("getdata_projectfiles_UCI HAR Dataset/UCI HAR Dataset/test/y_test.txt")
@@ -42,13 +42,13 @@ names(Y) <- "activity"
 #labelling the data set with descriptive activity names
 
 names(S) <- "subject"
-tidy1 <- cbind(S, Y, X)
+tidy1 <- cbind(Subject, Y, X)
 write.table(tidy1, "tidy_dataset.txt")
 
 # Creating second independent tidy data set with the average of each variable for each activity and each subject
 
-uniqueSubjects = unique(S)[,1]
-numSubjects = length(unique(S)[,1])
+uniqueSubjects = unique(Subject)[,1]
+numSubjects = length(unique(Subject)[,1])
 numActivities = length(activities[,1])
 numCols = dim(tidy1)[2]
 tidy2 = tidy1[1:(numSubjects*numActivities), ]
